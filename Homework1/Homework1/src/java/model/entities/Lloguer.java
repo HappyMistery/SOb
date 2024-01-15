@@ -34,7 +34,7 @@ public class Lloguer implements Serializable {
     @ManyToOne
     private Usuari usuari;
     
-    private int usuari_id;
+    private String nom_usuari;
 
     private String data;
     
@@ -46,8 +46,8 @@ public class Lloguer implements Serializable {
         return data;
     }
     
-    public int getUsuari_id(){
-        return usuari_id;
+    public String getUsuari_id(){
+        return nom_usuari;
     }
     
     public void setUsuari(Usuari user){

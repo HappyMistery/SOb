@@ -43,7 +43,7 @@ public class LloguerFacadeREST extends AbstractFacade<Lloguer> {
             result.setVideojocsLloguer(tempGames.get(i));
             tempGames.get(i).setLloguer(temp);
         }
-        TypedQuery<Usuari> tq = em.createQuery("SELECT u FROM Usuari u WHERE u.usuari_id IS NOT NULL AND u.usuari_id = "+temp.getUsuari_id(), Usuari.class);
+        TypedQuery<Usuari> tq = em.createQuery("SELECT u FROM Usuari u WHERE u.nom IS NOT NULL AND u.nom = "+temp.getUsuari_id(), Usuari.class);
         Usuari usuari = tq.getSingleResult();
         result.setUsuari(usuari);
         super.create(result);

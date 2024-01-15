@@ -44,13 +44,13 @@ public class UsuariFacadeREST extends AbstractFacade<Usuari> {
     }
     
     @GET
-    @Path("/${id}")
+    @Path("/{nom}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("id") int id) {
-        if(super.find(id) == null) {
+    public Response find(@PathParam("nom") String nom) {
+        if(super.find(nom) == null) {
             return Response.status(Response.Status.NOT_FOUND).entity("No user found").build();
         } else {
-            Usuari temp = super.find(id);
+            Usuari temp = super.find(nom);
             Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
             String json = gson.toJson(temp);
             return Response.ok(json, MediaType.APPLICATION_JSON).build();
@@ -59,10 +59,10 @@ public class UsuariFacadeREST extends AbstractFacade<Usuari> {
     
     @PUT
     @Secured
-    @Path("/${id}")
+    @Path("/{nom}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("id") int id, Usuari user) {
-        Usuari existeix = super.find(id);
+    public Response edit(@PathParam("nom") String nom, Usuari user) {
+        Usuari existeix = super.find(nom);
         if(existeix == null) {
             return Response.status(Response.Status.NOT_FOUND).entity("No user found").build();
         } else {
@@ -76,5 +76,4 @@ public class UsuariFacadeREST extends AbstractFacade<Usuari> {
     protected EntityManager getEntityManager() {
         return em;
     }
-    
 }

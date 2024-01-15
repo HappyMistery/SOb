@@ -19,8 +19,7 @@ public class Videojoc implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     private String nom;
-    
-    //*
+
     @ManyToMany
     @JoinTable(
         name="VIDEOJOC_LLOGUER",
@@ -28,7 +27,7 @@ public class Videojoc implements Serializable {
                 name="NOM_VIDEOJOC", referencedColumnName="nom"),
         inverseJoinColumns = @JoinColumn(
                 name="ID_LLOGUER", referencedColumnName="lloguer_id")
-    )//*/
+    )
     @JsonbTransient List<Lloguer> lloguers = new ArrayList<>();
     
     private String videoconsola;
