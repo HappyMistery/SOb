@@ -15,7 +15,7 @@ public class UsuariServiceImpl implements UsuariService {
     
     public UsuariServiceImpl() {
         client = jakarta.ws.rs.client.ClientBuilder.newClient();
-        webTarget = client.target(BASE_URI).path("$1");
+        webTarget = client.target(BASE_URI).path("usuari");
     }
     
     @Override

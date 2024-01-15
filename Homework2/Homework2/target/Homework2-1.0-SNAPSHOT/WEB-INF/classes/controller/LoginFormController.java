@@ -54,6 +54,6 @@ public class LoginFormController {
 
         log.log(Level.INFO, "Redirecting to the success page.");
         // You can add additional logic based on successful login
-        return "signup-success.jsp";
+        return "login-success.jsp";
     }
 }

@@ -25,10 +25,10 @@
                         </p>
 			<table class="table table-striped table-bordered">
 				<tr>
-					<td><b>Name </b>: ${usuari.nom}</td>
+					<td><b>Welcome!</td>
 				</tr>
 			</table>
-                        <a class="btn btn-sm btn-info text-white" href="<c:url value="/Web/Login" />">Go Back</a>
+                        <a class="btn btn-sm btn-info text-white" href="<c:url value="/Web/Shop" />">Keep Shopping</a>
 		</div>
 	</div>
         <jsp:include page="/WEB-INF/views/layout/footer.jsp" />

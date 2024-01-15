@@ -19,5 +19,5 @@ deim\urv\cat\homework2\Resources.class
 deim\urv\cat\homework2\controller\UsuariForm.class
 deim\urv\cat\homework2\controller\LogoutController.class
 deim\urv\cat\homework2\model\Videojoc.class
-deim\urv\cat\homework2\controller\UserForm.class
+deim\urv\cat\homework2\controller\ShopController.class
 deim\urv\cat\homework2\model\Usuari.class

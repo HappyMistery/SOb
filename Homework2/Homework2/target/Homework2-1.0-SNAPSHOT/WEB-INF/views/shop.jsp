@@ -1,56 +1,78 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Video Game Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>GAMES SHOP</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ShopStyle.css" />
 </head>
+
 <body>
 
     <header>
-        <h1>Video Game Rental</h1>
+        <h1>GAMES SHOP</h1>
+        <a href="${pageContext.request.contextPath}/Web/Login"" id="login-btn">Login</a>
     </header>
 
-    <section id="filters">
-        <label for="gameType">Filter by Game Type:</label>
-        <select id="gameType">
-            <!-- Add options dynamically based on your game types -->
-            <option value="platform">Platform</option>
-            <option value="action">Action</option>
-            <!-- Add more options as needed -->
-        </select>
-
-        <label for="console">Filter by Console:</label>
-        <select id="console">
-            <!-- Add options dynamically based on available consoles -->
-            <option value="gameBoy">Game Boy</option>
-            <option value="megaDrive">Mega Drive</option>
-            <!-- Add more options as needed -->
-        </select>
-    </section>
-
-    <section id="gameList">
-        <!-- Display video game list dynamically -->
-        <!-- Each game should have a clickable element to view details -->
-        <div class="gameItem" onclick="showDetails('SuperMarioLand')">
-            <img src="super_mario_land_cover.jpg" alt="Super Mario Land">
-            <p>Name: Super Mario Land</p>
-            <p>Console: Game Boy</p>
-            <p>Availability: In stock</p>
-            <p>Rental Price: $X.XX</p>
+    <div id="games-container">
+        <!-- Game 1 -->
+        <div class="game-box" onclick="redirectToGamePage('game1')">
+            <img src="game1.jpg" alt="Game 1">
+            <h3>Game 1</h3>
+            <p>Console 1</p>
+            <p>$49.99</p>
+            <p>In Stock</p>
         </div>
-        <!-- Add more game items as needed -->
-    </section>
+
+        <!-- Game 2 -->
+        <div class="game-box" onclick="redirectToGamePage('game2')">
+            <img src="game2.jpg" alt="Game 2">
+            <h3>Game 2</h3>
+            <p>Console 2</p>
+            <p>$39.99</p>
+            <p>Out of Stock</p>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-box" onclick="redirectToGamePage('game3')">
+            <img src="game3.jpg" alt="Game 3">
+            <h3>Game 3</h3>
+            <p>Console 3</p>
+            <p>$59.99</p>
+            <p>In Stock</p>
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-box" onclick="redirectToGamePage('game4')">
+            <img src="game4.jpg" alt="Game 4">
+            <h3>Game 4</h3>
+            <p>Console 4</p>
+            <p>$29.99</p>
+            <p>Out of Stock</p>
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-box" onclick="redirectToGamePage('game5')">
+            <img src="game5.jpg" alt="Game 5">
+            <h3>Game 5</h3>
+            <p>Console 5</p>
+            <p>$79.99</p>
+            <p>In Stock</p>
+        </div>
+
+        <!-- Game 6 -->
+        <div class="game-box" onclick="redirectToGamePage('game6')">
+            <img src="game6.jpg" alt="Game 6">
+            <h3>Game 6</h3>
+            <p>Console 6</p>
+            <p>$49.99</p>
+            <p>Out of Stock</p>
+        </div>
+    </div>
 
     <script>
-        // Function to show details for a selected game
-        function showDetails(gameName) {
-            // Redirect to the detailed view page with the selected game
-            window.location.href = "details.html?game=" + gameName;
+        function redirectToGamePage(gameId) {
+            <a href="${pageContext.request.contextPath}/Web/Login"" id="login-btn">Login</a>
         }
     </script>
 
